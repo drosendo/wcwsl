@@ -29,16 +29,16 @@ jQuery.ajax({
 
         if (response.status && response.status != 'warning') {
 
-            $('form#wcwsl_license').append('<div class="notice notice-success is-dismissible">' + response.message + '. Page wil reload shorthly.</div>');
+            $('form#wcwsl_licenseform').append('<div class="notice notice-success is-dismissible">' + response.message + '. Page wil reload shorthly.</div>');
             setTimeout(function () {
                 $('.notice.notice-success').slideUp('fast').fadeOut(function () {
                     window.location.reload();
                 });
             }, 2500);
         } else if (response.status == 'warning') {
-            $('form#wcwsl_license').append('<div class="notice notice-warning is-dismissible">' + response.message + '</div>');
+            $('form#wcwsl_licenseform').append('<div class="notice notice-warning is-dismissible">' + response.message + '</div>');
         } else {
-            $('form#wcwsl_icense').append('<div class="notice notice-error is-dismissible">' + response.message + '</div>');
+            $('form#wcwsl_licenseform').append('<div class="notice notice-error is-dismissible">' + response.message + '</div>');
         }
 
     }
