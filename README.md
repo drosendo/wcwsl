@@ -10,11 +10,13 @@ Any help on improving this is welcomed.
 Just put the wcwsl.php into your plugin folder and include it so that is runs.
 
 ## Get license
-
-`get_option('wcwsl_softlicense_key');`
+```
+get_option('wcwsl_softlicense_key');
+```
 
 ## Ajax register license Example
 
+```
 jQuery.ajax({
     url: ajaxurl,
     type: 'post',
@@ -41,6 +43,7 @@ jQuery.ajax({
 
     }
 });
+```
 
 ### Other actions in wcwsl.php
 
